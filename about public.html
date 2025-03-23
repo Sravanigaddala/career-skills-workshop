@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Speaking Workshop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 90%;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #2575fc;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .details p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            margin: 10px 0;
+        }
+
+        h2 {
+            color: #2575fc;
+            margin-top: 30px;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        ul li {
+            background: rgba(236, 240, 241, 0.8);
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1rem;
+            color: #333;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        ul li:hover {
+            transform: translateX(10px);
+            background: #2575fc;
+            color: white;
+        }
+
+        .register-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #2575fc, #6a11cb);
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .register-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 30px rgba(37, 117, 252, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎤 Public Speaking Masterclass</h1>
+        <div class="details">
+            <p><strong>📅 Date & Time:</strong> 23-03-2025, 11 AM</p>
+            <p><strong>🏛 Conducted by:</strong> Chaitanya Bharathi Institute of Technology(A)</p>
+            <p><strong>📍 Location:</strong> CBIT,Gandipet</p>
+        </div>
+
+        <h2>🎯 What You'll Learn:</h2>
+        <ul>
+            <li><i class="fas fa-microphone"></i> Overcome stage fear & nervousness</li>
+            <li><i class="fas fa-comments"></i> Develop powerful communication skills</li>
+            <li><i class="fas fa-user-tie"></i> Master body language & eye contact</li>
+            <li><i class="fas fa-users"></i> Engage & connect with your audience</li>
+            <li><i class="fas fa-lightbulb"></i> Effective storytelling techniques</li>
+        </ul>
+
+        <h2>📢 Why Attend?</h2>
+        <ul>
+            <li><i class="fas fa-chart-line"></i> Boost confidence in public speaking</li>
+            <li><i class="fas fa-bullhorn"></i> Learn from expert public speakers</li>
+            <li><i class="fas fa-rocket"></i> Improve presentation & persuasion skills</li>
+        </ul>
+
+        <a href="register.html" class="register-btn">🔗 Register Now</a>
+    </div>
+</body>
+</html>

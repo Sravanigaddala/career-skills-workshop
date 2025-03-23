@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Skill Workshop</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            color: #333;
+            padding-top: 80px;
+        }
+
+        nav {
+            width: 100%;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            padding: 15px 30px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ffeb3b;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 20px;
+            transition: 0.3s ease-in-out;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background: #ffeb3b;
+            transition: all 0.3s ease-in-out;
+            transform: translateX(-50%);
+        }
+
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffeb3b;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 90%;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 1s ease-in-out;
+            margin-top: 100px; /* Added margin to prevent overlap */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #2575fc;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .workshop-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 20px;
+            padding: 20px;
+        }
+        @media (max-width: 768px) {
+            .workshop-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .workshop-list {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        .workshop {
+            background-color: #e3f2fd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .workshop img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .btn-container {
+            margin-top: 10px;
+        }
+
+        .btn {
+            background-color: #0073e6;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+            transition: transform 0.2s ease, background 0.3s ease;
+        }
+        .btn:hover {
+            background: #005bb5;
+            transform: scale(1.05);
+        }
+
+        .footer {
+            background-color: #0073e6;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        #topBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #0073e6;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+
+
+    </style>
+</head>
+
+<body>
+    <header><h1>Career Skill Workshop</h1></header>
+    <nav>
+        <div class="logo">🚀 Career Workshop</div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="create.html">Create Workshop</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    
+    <div class="container">
+        <h2>Welcome to the Career Skill Workshop</h2>
+        <p>Enhance your skills and prepare for your dream career with our expert-led sessions.</p>
+        <p>Join us to learn resume building, interview techniques, and much more!</p>
+
+        <h2 id="about">About</h2>
+        <p>The Career Skill Workshop is designed to help students develop essential skills for the corporate world. Our
+            sessions cover topics such as communication, leadership, problem-solving, and career planning.</p>
+
+        <h2 id="workshops">Workshops</h2>
+        <div class="workshop-list">
+            <div class="workshop">
+                <img src="resume.jpg" alt="Resume Building">
+                <h3>Resume Building</h3>
+                <p>Learn how to create a strong and professional resume that stands out.</p>
+                    <div class="btn-container">
+                        <button class="btn"><a href="about resume.html" style="color: white; text-decoration: none;">About</a></button>
+                        <button class="btn"><a href="register.html" style="color: white; text-decoration: none;">Register</a></button>
+                    </div>
+            </div>
+            <div class="workshop">
+                <img src="interview.jpg" alt="Interview Techniques">
+                <h3>Interview Techniques</h3>
+                <p>Master the art of interviews with expert guidance and mock interviews.</p>
+                    <div class="btn-container">
+                        <button class="btn"><a href="about interview.html" style="color: white; text-decoration: none;">About</a></button>
+                        <button class="btn"><a href="register.html" style="color: white; text-decoration: none;">Register</a></button>
+                    </div>
+            </div>
+            <div class="workshop">
+                <img src="public.webp" alt="Public Speaking">
+                <h3>Public Speaking</h3>
+                <p>Boost your confidence and communication skills for presentations and discussions.</p>
+            
+                    <div class="btn-container">
+                        <button class="btn"><a href="about public.html" style="color: white; text-decoration: none;">About</a></button>
+                        <button class="btn"><a href="register.html" style="color: white; text-decoration: none;">Register</a></button>
+                    </div>
+            </div>
+            <div class="workshop">
+                <img src="career.jpg" alt="Career Planning" loading="lazy">
+                <h3>Career Planning</h3>
+                <p>Set your career goals and create a roadmap to achieve them.</p>
+                <div class="btn-container">
+                    <button class="btn"><a href="about career.html" style="color: white; text-decoration: none;">About</a></button>
+                    <button class="btn"><a href="register.html" style="color: white; text-decoration: none;">Register</a></button>
+                </div>
+
+            </div>
+            <div class="workshop">
+                <img src="time.jpg" alt="Time Management" loading="lazy">
+                <h3>Time Management</h3>
+                <p>Learn to effectively manage time and boost productivity.</p>
+                <div class="btn-container">
+                    <button class="btn"><a href="about time.html" style="color: white; text-decoration: none;">About</a></button>
+                    <button class="btn"><a href="register.html" style="color: white; text-decoration: none;">Register</a></button>
+                </div>
+
+            </div>
+            <div class="workshop">
+                <img src="networkk.jpg" alt="Networking Skills" loading="lazy">
+                <h3>Networking Skills</h3>
+                <p>Develop strong networking skills to grow your professional circle.</p>
+                <div class="btn-container">
+                    <button class="btn"><a href="about network.html" style="color: white; text-decoration: none;">About</a></button>
+                    <button class="btn"><a href="register.html" style="color: white; text-decoration: none;">Register</a></button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2025 Career Skill Workshop | All Rights Reserved
+    </div>
+    <button id="topBtn" onclick="scrollToTop()">⬆️</button>
+<script>
+    window.onscroll = function() {
+        let topBtn = document.getElementById("topBtn");
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
+    };
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+
+</html>

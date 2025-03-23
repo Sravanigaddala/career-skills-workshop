@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Building Workshop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 90%;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #2575fc;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .details p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            margin: 10px 0;
+        }
+
+        .code {
+            font-weight: bold;
+            color: #ff6b6b;
+            background: #f9f9f9;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        h2 {
+            color: #2575fc;
+            margin-top: 30px;
+            font-size: 1.8rem;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        ul li {
+            background: rgba(236, 240, 241, 0.8);
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1rem;
+            color: #333;
+            transition: transform 0.2s ease, background 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        ul li:hover {
+            transform: translateX(10px);
+            background: #2575fc;
+            color: white;
+        }
+
+        ul li i {
+            font-size: 1.2rem;
+            color: #2575fc;
+        }
+
+        ul li:hover i {
+            color: white;
+        }
+
+        .register-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #2575fc, #6a11cb);
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0px 5px 20px rgba(37, 117, 252, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .register-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%) rotate(45deg);
+            transition: all 0.5s ease;
+        }
+
+        .register-btn:hover::before {
+            width: 0;
+            height: 0;
+        }
+
+        .register-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 30px rgba(37, 117, 252, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .details p {
+                font-size: 1rem;
+            }
+
+            ul li {
+                font-size: 0.9rem;
+            }
+
+            .register-btn {
+                font-size: 1rem;
+                padding: 12px 25px;
+            }
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>📌 Resume Building Masterclass</h1>
+        <div class="details">
+            <p><strong>📅 Date & Time:</strong> 23-03-2025, 11 AM</p>
+            <p><strong>🏛 Conducted by:</strong>  Chaitanya Bharathi Institute of Technology(A)</p>
+            <p><strong>📍 Location:</strong> CBIT,Gandipet</p>
+            <p><strong>💼 Workshop Code:</strong> <span class="code">RB123</span></p>
+            <p><strong>💰 Price:</strong> ₹500</p>
+        </div>
+
+        <h2>🎯 What You'll Learn:</h2>
+        <ul>
+            <li><i class="fas fa-pencil-alt"></i> Crafting a compelling resume tailored to your industry</li>
+            <li><i class="fas fa-check-circle"></i> Essential do’s and don’ts in resume writing</li>
+            <li><i class="fas fa-file-alt"></i> ATS-friendly formatting tips</li>
+            <li><i class="fas fa-trophy"></i> Showcasing skills and achievements effectively</li>
+            <li><i class="fas fa-comments"></i> Live resume reviews & expert feedback</li>
+        </ul>
+        <h2>📢 Why Attend?</h2>
+        <ul>
+            <li><i class="fas fa-user-tie"></i> Get your resume reviewed by industry professionals</li>
+            <li><i class="fas fa-chart-line"></i> Learn modern resume trends and best practices</li>
+            <li><i class="fas fa-rocket"></i> Boost your chances of landing interviews</li>
+        </ul>
+
+        <a href="register.html" class="register-btn">🔗 Register Now</a>
+    </div>
+</body>
+
+</html>
